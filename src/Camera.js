@@ -1,6 +1,5 @@
 import React,{ useState, useEffect} from "react";
 import { useParams, Routes, Route } from "react-router-dom";
-import axios from "axios";
 import Webcam from "react-webcam";
 import FormData from "form-data";
 import './styles.css';
