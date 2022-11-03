@@ -1,22 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import React, { useEffect } from 'react';
+import { useParams,Routes, Route } from 'react-router-dom';
+import Camera from './Camera';
+function App({ match }) {
+  // const [data, setData] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(null);
+ 
+  // get slug after url and fetch by it from api
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <div>
+      <Routes>
+          <Route path="/camera/:slug" element={<Camera />} />
+      </Routes>
+    </div>
       </header>
     </div>
   );
