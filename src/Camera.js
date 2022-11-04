@@ -28,9 +28,13 @@ function Camera() {
         formData.append("slug", slug);
         formData.append("demo_image", fileOfImage);
         setStep(2);
-        fetch("/api/camera", {
+        fetch("http://164.92.248.91:3096/imageserver/image", {
             method: "POST",
             body: formData,
+            headers: {
+                "Content-Type": "application/json",
+            },
+            mode: "cors"
         })
             .then((response) => response.json())
             .then((result) => {
